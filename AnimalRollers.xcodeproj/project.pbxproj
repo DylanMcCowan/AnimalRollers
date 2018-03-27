@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */; };
-		FC0C362E206AD27B00E1B0BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C362D206AD27B00E1B0BA /* ViewController.swift */; };
-		FC0C3631206AD27B00E1B0BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C362F206AD27B00E1B0BA /* Main.storyboard */; };
+		FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */; };
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
 		FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		FC0C3628206AD27B00E1B0BA /* AnimalRollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC0C362D206AD27B00E1B0BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC0C3630206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC0C3630206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Homescreen.storyboard; sourceTree = "<group>"; };
 		FC0C3632206AD27B00E1B0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0C3635206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC0C3637206AD27B00E1B0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +52,69 @@
 		FC0C362A206AD27B00E1B0BA /* AnimalRollers */ = {
 			isa = PBXGroup;
 			children = (
-				FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */,
-				FC0C362D206AD27B00E1B0BA /* ViewController.swift */,
-				FC0C362F206AD27B00E1B0BA /* Main.storyboard */,
+				FC0C3640206AD89E00E1B0BA /* Storyboards */,
+				FC0C363F206AD87300E1B0BA /* Assets */,
+				FC0C363E206AD84B00E1B0BA /* View Controllers */,
+				FC0C363D206AD84100E1B0BA /* Classes */,
 				FC0C3632206AD27B00E1B0BA /* Assets.xcassets */,
-				FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */,
 				FC0C3637206AD27B00E1B0BA /* Info.plist */,
 			);
 			path = AnimalRollers;
+			sourceTree = "<group>";
+		};
+		FC0C363D206AD84100E1B0BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FC0C363E206AD84B00E1B0BA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FC0C363F206AD87300E1B0BA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C3643206AD92F00E1B0BA /* Animals */,
+				FC0C3642206AD91F00E1B0BA /* Audio */,
+				FC0C3641206AD90F00E1B0BA /* Imags */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FC0C3640206AD89E00E1B0BA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */,
+				FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FC0C3641206AD90F00E1B0BA /* Imags */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Imags;
+			sourceTree = "<group>";
+		};
+		FC0C3642206AD91F00E1B0BA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		FC0C3643206AD92F00E1B0BA /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +149,7 @@
 				TargetAttributes = {
 					FC0C3627206AD27B00E1B0BA = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -125,7 +178,7 @@
 			files = (
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
-				FC0C3631206AD27B00E1B0BA /* Main.storyboard in Resources */,
+				FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC0C362E206AD27B00E1B0BA /* ViewController.swift in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,12 +196,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC0C362F206AD27B00E1B0BA /* Main.storyboard */ = {
+		FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FC0C3630206AD27B00E1B0BA /* Base */,
 			);
-			name = Main.storyboard;
+			name = Homescreen.storyboard;
 			sourceTree = "<group>";
 		};
 		FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */ = {
@@ -274,14 +326,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W28JC3BNH3;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AnimalRollers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,14 +342,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W28JC3BNH3;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AnimalRollers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
