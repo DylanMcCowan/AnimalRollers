@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEEE21DD208BCB8800C41226 /* GameDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = AEEE21DC208BCB8800C41226 /* GameDatabase.db */; };
 		FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */; };
 		FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */; };
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AEEE21DC208BCB8800C41226 /* GameDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameDatabase.db; sourceTree = "<group>"; };
 		FC0C3628206AD27B00E1B0BA /* AnimalRollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC0C3630206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Homescreen.storyboard; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEEE21DB208BCB6A00C41226 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AEEE21DC208BCB8800C41226 /* GameDatabase.db */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		FC0C361F206AD27B00E1B0BA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		FC0C362A206AD27B00E1B0BA /* AnimalRollers */ = {
 			isa = PBXGroup;
 			children = (
+				AEEE21DB208BCB6A00C41226 /* Database */,
 				FC192208208BB0A300B2F782 /* DataComponents-Obj-C */,
 				FC0C3640206AD89E00E1B0BA /* Storyboards */,
 				FC0C363F206AD87300E1B0BA /* Assets */,
@@ -207,6 +218,7 @@
 			files = (
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
+				AEEE21DD208BCB8800C41226 /* GameDatabase.db in Resources */,
 				FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
