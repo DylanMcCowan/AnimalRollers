@@ -90,7 +90,7 @@
 				FC0C3644206AE45300E1B0BA /* ARContent */,
 				FC0C3643206AD92F00E1B0BA /* Animals */,
 				FC0C3642206AD91F00E1B0BA /* Audio */,
-				FC0C3641206AD90F00E1B0BA /* Imags */,
+				FC0C3641206AD90F00E1B0BA /* Images */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -104,11 +104,11 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FC0C3641206AD90F00E1B0BA /* Imags */ = {
+		FC0C3641206AD90F00E1B0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Imags;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		FC0C3642206AD91F00E1B0BA /* Audio */ = {
