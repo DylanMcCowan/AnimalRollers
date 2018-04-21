@@ -11,7 +11,7 @@
 
 @implementation DataHandler
 
-@synthesize dbName, dbPath, users;
+@synthesize dbName, dbPath, players;
 
 -(BOOL)initalizeDataHandler
 {
@@ -45,7 +45,7 @@
 -(void)readDatabase
 {
     
-    [self.users removeAllObjects];
+    [self.players removeAllObjects];
     
     sqlite3 *database;
     if(sqlite3_open([self.dbPath UTF8String], &database)== SQLITE_OK)
@@ -66,9 +66,9 @@
                 char *sco = (char *)sqlite3_column_text(compiledStatement, 3);
                 NSString *score = [NSString stringWithUTF8String:sco];
                 
-                Data *usrData = [[Data alloc] initWithData:name usrLevel:level usrScore:score];
+                Player *playerData = [[Player alloc] initWithData:name playerLevel:level playerScore:score];
                 
-                [self.users addObject:usrData];
+                [self.players addObject:playerData];
             }
             NSLog(@"DONE");
         }else{
@@ -85,7 +85,7 @@
     
 }
 
--(BOOL)insertIntoDatabase:(Data *)user
+-(BOOL)insertIntoDatabase:(Player *)p
 {
     sqlite3 *database;
     BOOL returnCode = YES;
@@ -97,10 +97,10 @@
         
         if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL)==SQLITE_OK)
         {
-            //name, level, score
-            sqlite3_bind_text(compiledStatement, 1, [user.name UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 2, [user.level UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 3, [user.score UTF8String], -1, SQLITE_TRANSIENT);
+            //name, level, high-score
+            sqlite3_bind_text(compiledStatement, 1, [p.name UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [p.level UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 3, [p.score UTF8String], -1, SQLITE_TRANSIENT);
             
         }
         

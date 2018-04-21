@@ -21,6 +21,10 @@
 		FC192223208BBF9900B2F782 /* pig-5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221D208BBF9900B2F782 /* pig-5.png */; };
 		FC192224208BBF9900B2F782 /* pig-6.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221E208BBF9900B2F782 /* pig-6.png */; };
 		FC192226208BC67700B2F782 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC192225208BC67700B2F782 /* GameLogic.swift */; };
+		FC192231208BF4F500B2F782 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FC192229208BF4F400B2F782 /* DataHandler.m */; };
+		FC192232208BF4F500B2F782 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19222D208BF4F400B2F782 /* UserCell.m */; };
+		FC192233208BF4F500B2F782 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19222E208BF4F400B2F782 /* Player.m */; };
+		FC192234208BF4F500B2F782 /* GameDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = FC192230208BF4F500B2F782 /* GameDatabase.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,14 @@
 		FC19221D208BBF9900B2F782 /* pig-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-5.png"; sourceTree = "<group>"; };
 		FC19221E208BBF9900B2F782 /* pig-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-6.png"; sourceTree = "<group>"; };
 		FC192225208BC67700B2F782 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		FC192228208BF4F400B2F782 /* AnimalRollers-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AnimalRollers-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC192229208BF4F400B2F782 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		FC19222A208BF4F400B2F782 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		FC19222B208BF4F400B2F782 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		FC19222C208BF4F400B2F782 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		FC19222D208BF4F400B2F782 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		FC19222E208BF4F400B2F782 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		FC192230208BF4F500B2F782 /* GameDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameDatabase.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,8 @@
 		FC0C362A206AD27B00E1B0BA /* AnimalRollers */ = {
 			isa = PBXGroup;
 			children = (
+				FC19222F208BF4F500B2F782 /* Database */,
+				FC192227208BF4F400B2F782 /* DataComponents-Obj-C */,
 				FC0C3640206AD89E00E1B0BA /* Storyboards */,
 				FC0C363F206AD87300E1B0BA /* Assets */,
 				FC192205208BAF5800B2F782 /* View Controllers */,
@@ -155,6 +169,28 @@
 			path = GameScreenImg;
 			sourceTree = "<group>";
 		};
+		FC192227208BF4F400B2F782 /* DataComponents-Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				FC192228208BF4F400B2F782 /* AnimalRollers-Bridging-Header.h */,
+				FC192229208BF4F400B2F782 /* DataHandler.m */,
+				FC19222A208BF4F400B2F782 /* Player.h */,
+				FC19222B208BF4F400B2F782 /* UserCell.h */,
+				FC19222C208BF4F400B2F782 /* DataHandler.h */,
+				FC19222D208BF4F400B2F782 /* UserCell.m */,
+				FC19222E208BF4F400B2F782 /* Player.m */,
+			);
+			path = "DataComponents-Obj-C";
+			sourceTree = "<group>";
+		};
+		FC19222F208BF4F500B2F782 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FC192230208BF4F500B2F782 /* GameDatabase.db */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
+				FC192234208BF4F500B2F782 /* GameDatabase.db in Resources */,
 				FC192224208BBF9900B2F782 /* pig-6.png in Resources */,
 				FC19221F208BBF9900B2F782 /* pig-1.png in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
@@ -234,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC192231208BF4F500B2F782 /* DataHandler.m in Sources */,
 				FC192217208BB3DF00B2F782 /* GameScreenViewController.swift in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
 				FC192226208BC67700B2F782 /* GameLogic.swift in Sources */,
+				FC192233208BF4F500B2F782 /* Player.m in Sources */,
+				FC192232208BF4F500B2F782 /* UserCell.m in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

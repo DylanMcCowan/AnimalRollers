@@ -1,5 +1,5 @@
 //
-//  UserData.h
+//  Player.h
 //  Final Project
 //
 //  Created by Mahadevan Ramakrishnan on 2018-04-18.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Data : NSObject
+@interface Player: NSObject
 {
     NSString *name;
     NSString *level;
@@ -21,7 +21,7 @@
 @property(nonatomic, strong) NSString *score;
 
 
--(id)initWithData:(NSString *)name usrLevel:(NSString *)level usrScore:(NSString *)score;
+-(id)initWithData:(NSString *)playerName playerLevel:(NSString *)level playerScore:(NSString *)score;
 
 
 

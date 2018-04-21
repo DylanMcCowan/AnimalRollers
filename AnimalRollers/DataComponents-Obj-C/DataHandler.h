@@ -8,22 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "Data.h"
+#import "Player.h"
 
 @interface DataHandler : NSObject
 {
     NSString *dbPath;
     NSString *dbName;
-    NSMutableArray *users;
+    NSMutableArray *players;
     
 }
 
 @property (nonatomic, strong) NSString *dbPath;
 @property (nonatomic, strong) NSString *dbName;
-@property (nonatomic, strong) NSMutableArray *users;
+@property (nonatomic, strong) NSMutableArray *players;
 
 -(void)checkAndInitDatabase;
 -(void)readDatabase;
--(BOOL)insertIntoDatabase:(Data *)user;
+-(BOOL)insertIntoDatabase:(Player *)p;
 -(BOOL)initalizeDataHandler;
 @end
