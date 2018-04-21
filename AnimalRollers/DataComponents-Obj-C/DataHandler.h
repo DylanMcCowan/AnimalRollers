@@ -1,14 +1,14 @@
 //
 //  DataHandler.h
-//  Assignment-2
+//  Final Project
 //
-//  Created by Dylan McCowan on 2018-04-18.
-//  Copyright © 2018 Dylan McCowan. All rights reserved.
+//  Created by Mahadevan Ramakrishnan on 2018-04-18.
+//  Copyright © 2018 Mahadevan Ramakrishnan. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "UserData.h"
+#import "Data.h"
 
 @interface DataHandler : NSObject
 {
@@ -24,6 +24,6 @@
 
 -(void)checkAndInitDatabase;
 -(void)readDatabase;
--(BOOL)insertIntoDatabase:(UserData *)user;
+-(BOOL)insertIntoDatabase:(Data *)user;
 -(BOOL)initalizeDataHandler;
 @end

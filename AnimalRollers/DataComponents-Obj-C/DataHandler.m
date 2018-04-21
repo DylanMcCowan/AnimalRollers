@@ -1,9 +1,9 @@
 //
 //  DataHandler.m
-//  Assignment-2
+//  Final Project
 //
-//  Created by Dylan McCowan on 2018-04-18.
-//  Copyright © 2018 Dylan McCowan. All rights reserved.
+//  Created by Mahadevan Ramakrishnan on 2018-04-18.
+//  Copyright © 2018 Mahadevan Ramakrishnan. All rights reserved.
 //
 
 #import "DataHandler.h"
@@ -57,32 +57,16 @@
         {
             while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-                //name, address, phone, email, avatar, age, gender, dob
-                char *n = (char *)sqlite3_column_text(compiledStatement, 1);
-                NSString *name = [NSString stringWithUTF8String:n];
+                char *nam = (char *)sqlite3_column_text(compiledStatement, 1);
+                NSString *name = [NSString stringWithUTF8String:nam];
                 
-                char *ad = (char *)sqlite3_column_text(compiledStatement, 2);
-                NSString *address = [NSString stringWithUTF8String:ad];
+                char *lev = (char *)sqlite3_column_text(compiledStatement, 2);
+                NSString *level = [NSString stringWithUTF8String:lev];
                 
-                char *ph = (char *)sqlite3_column_text(compiledStatement, 3);
-                NSString *phone = [NSString stringWithUTF8String:ph];
+                char *sco = (char *)sqlite3_column_text(compiledStatement, 3);
+                NSString *score = [NSString stringWithUTF8String:sco];
                 
-                char *em = (char *)sqlite3_column_text(compiledStatement, 4);
-                NSString *email = [NSString stringWithUTF8String:em];
-                
-                char *av = (char *)sqlite3_column_text(compiledStatement, 5);
-                NSString *avatar = [NSString stringWithUTF8String:av];
-                
-                NSInteger age = sqlite3_column_int(compiledStatement, 6);
-                
-                char *gen = (char *)sqlite3_column_text(compiledStatement, 7);
-                NSString *gender = [NSString stringWithUTF8String:gen];
-                
-                char *d = (char *)sqlite3_column_text(compiledStatement, 8);
-                NSString *dob = [NSString stringWithUTF8String:d];
-                
-                
-                UserData *usrData = [[UserData alloc] initWithData:name usrAddr:address usrPhone:phone usrEmail:email usrAvatar:avatar usrAge:age usrGender:gender usrDob:dob];
+                Data *usrData = [[Data alloc] initWithData:name usrLevel:level usrScore:score];
                 
                 [self.users addObject:usrData];
             }
@@ -101,27 +85,22 @@
     
 }
 
--(BOOL)insertIntoDatabase:(UserData *)user
+-(BOOL)insertIntoDatabase:(Data *)user
 {
     sqlite3 *database;
     BOOL returnCode = YES;
     
     if(sqlite3_open([self.dbPath UTF8String], &database) == SQLITE_OK)
     {
-        char *sqlStatement = "insert into users values(NULL, ?, ?, ?, ?, ?, ?, ?, ?)";
+        char *sqlStatement = "insert into users values(NULL, ?, ?, ?,)";
         sqlite3_stmt * compiledStatement;
         
         if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL)==SQLITE_OK)
         {
-            //name, address, phone, email, avatar, age, gender, dob
+            //name, level, score
             sqlite3_bind_text(compiledStatement, 1, [user.name UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 2, [user.address UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 3, [user.phone UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 4, [user.email UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 5, [user.avatarName UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_int(compiledStatement, 6, user.age);
-            sqlite3_bind_text(compiledStatement, 7, [user.gender UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 8, [user.dob UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 2, [user.level UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(compiledStatement, 3, [user.score UTF8String], -1, SQLITE_TRANSIENT);
             
         }
         

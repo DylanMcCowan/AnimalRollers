@@ -1,31 +1,28 @@
 //
 //  UserData.m
-//  Assignment-2
+//  Final Project
 //
-//  Created by Dylan McCowan on 2018-04-18.
-//  Copyright © 2018 Dylan McCowan. All rights reserved.
+//  Created by Mahadevan Ramakrishnan on 2018-04-18.
+//  Copyright © 2018 Mahadevan Ramakrishnan. All rights reserved.
 //
 
 #import "Data.h"
 
-@implementation UserData
+@implementation Data
 
-@synthesize name, address, phone, avatarName, gender, age, email, dob;
+@synthesize name, level, score;
 
-//name, address, phone, email, avatar, age, gender, dob
--(id)initWithData:(NSString *)name usrAddr:(NSString *)addr usrPhone:(NSString *)phone usrEmail:(NSString *)em usrAvatar:(NSString *)avatar usrAge:(NSInteger)age usrGender:(NSString *)gender usrDob:(NSString *)d
+//name, level, score
+-(id)initWithData:(NSString *)name usrLevel:(NSString *)level usrScore:(NSString *)score;
 {
     self = [super init];
     if(self)
     {
-        self.address = addr;
-        self.age = age;
-        self.avatarName = avatar;
-        self.gender = gender;
         self.name = name;
-        self.phone = phone;
-        self.email = em;
-        self.dob = d;
+        self.level = level;
+        self.score = score;
+        
+       
     }
     
     return self;
