@@ -19,12 +19,16 @@ class GameScreenViewController: UIViewController {
     @IBOutlet var btnEndTurn : UIButton!
     @IBOutlet var btnQuitGame : UIButton!
     
+    @IBOutlet var swScoreDoubler : UISwitch!
+    
     @IBOutlet var lbCurrentPlayer : UILabel!
     @IBOutlet var lbCurrentScore : UILabel!
+    
+    let gl = GameLogic()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +37,90 @@ class GameScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK: - Game Actions
+    @IBAction func endPlayerTurn(sender: UIButton)
+    {
+        endTurn()
+    }
+    
+    @IBAction func playerQuitGame(sender: UIButton)
+    {
+        let quitAlert = UIAlertController(title: "Are you sure?", message: "Do you wish to quit the game? Any scores and progress will be lost for all players", preferredStyle: .alert)
+        
+        let yesQuit = UIAlertAction(title: "Yes", style: .default, handler:
+            {(alert : UIAlertAction!) in
+                self.gl.quitGame()
+                self.dismiss(animated: true, completion: nil)
+        })
+        
+        let noQuit = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        quitAlert.addAction(yesQuit)
+        quitAlert.addAction(noQuit)
+        present(quitAlert, animated: true)
+    }
+    
+    @IBAction func playerSelectedPig(sender: UIButton)
+    {
+        var multiplier = 1
+        if swScoreDoubler.isOn
+        {
+            multiplier = 4
+            swScoreDoubler.setOn(false, animated: true)
+        }
+        
+        switch sender.tag {
+        case 0:
+            gl.calculateScore(newScore: 1)
+            break
+        case 1:
+            gl.calculateScore(newScore: (5 * multiplier) )
+            break
+        case 2:
+            gl.calculateScore(newScore: (5 * multiplier) )
+            break
+        case 3:
+            gl.calculateScore(newScore: (10 * multiplier) )
+            break
+        case 4:
+            gl.calculateScore(newScore: (15 * multiplier) )
+            break
+        case 5:
+            gl.calculateScore(newScore: -1)
+            alertPigOut()
+            endTurn()
+            break
+        default:
+            gl.calculateScore(newScore: -2)
+        }
+        updatePlayerScoreLabel()
+    }
+    
+    private func endTurn()
+    {
+        updatePlayer()
+    }
+    
+    private func alertPigOut()
+    {
+         let pigoutAlert = UIAlertController(title: "Oh No!", message: "You just pigged-out, your turn is over and earn no points this turn", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Better Luck Next Round!", style: .cancel, handler: nil)
+        pigoutAlert.addAction(ok)
+        present(pigoutAlert, animated: true)
+    }
+    
+    private func updatePlayerScoreLabel()
+    {
+        lbCurrentScore.text = gl.getCurrentScore()
+    }
+    
+    private func updatePlayer()
+    {
+        lbCurrentScore.text = String(gl.getCurrentScore())
+        lbCurrentPlayer.text = gl.nextPlayer()
+    }
 
     /*
     // MARK: - Navigation

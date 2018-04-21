@@ -10,46 +10,64 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game Screen View Controller-->
         <scene sceneID="DiF-Be-dXV">
             <objects>
-                <viewController id="uAd-NG-Hwx" sceneMemberID="viewController">
+                <viewController id="uAd-NG-Hwx" customClass="GameScreenViewController" customModule="AnimalRollers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8BI-5S-Jg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izj-91-DpP">
-                                <rect key="frame" x="36" y="219" width="136" height="105"/>
+                                <rect key="frame" x="36" y="245" width="136" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pig-1.png"/>
+                                <connections>
+                                    <action selector="playerSelectedPigWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="ZQM-1p-g7n"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wd5-ej-Aeh">
-                                <rect key="frame" x="203" y="219" width="136" height="105"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wd5-ej-Aeh">
+                                <rect key="frame" x="203" y="245" width="136" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pig-2.png"/>
+                                <connections>
+                                    <action selector="playerSelectedPigWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="UbD-Jy-5cE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er4-mx-bKN">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er4-mx-bKN">
                                 <rect key="frame" x="36" y="363" width="136" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pig-3.png"/>
+                                <connections>
+                                    <action selector="playerSelectedPigWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="byo-FX-CXH"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91L-Hf-Cuu">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91L-Hf-Cuu">
                                 <rect key="frame" x="203" y="363" width="136" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pig-4.png"/>
+                                <connections>
+                                    <action selector="playerSelectedPigWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="vpU-hN-BNa"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKB-3Q-2P8">
-                                <rect key="frame" x="36" y="502" width="136" height="107"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKB-3Q-2P8">
+                                <rect key="frame" x="36" y="483" width="136" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pig-5.png"/>
+                                <connections>
+                                    <action selector="playerSelectedPigWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="GY5-Lp-sqf"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl2-Xq-ebV">
-                                <rect key="frame" x="203" y="499" width="136" height="110"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xl2-Xq-ebV">
+                                <rect key="frame" x="203" y="481" width="136" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="pig-6.png"/>
+                                <connections>
+                                    <action selector="playerSelectedPigWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="Ld7-dA-Cw8"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Pig Roll Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-eU-Weo">
-                                <rect key="frame" x="106" y="190" width="162" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Pig Roll Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-eU-Weo">
+                                <rect key="frame" x="107" y="221" width="159" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -62,17 +80,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-XJ-MIS">
-                                <rect key="frame" x="132" y="152" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="End Your Turn">
-                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6d-Yp-i8e">
-                                <rect key="frame" x="151" y="628" width="73" height="30"/>
+                                <rect key="frame" x="286" y="617" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Quit Game"/>
+                                <connections>
+                                    <action selector="playerQuitGameWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="2hJ-2n-iJA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[CurrentScore]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWb-yQ-P6a">
                                 <rect key="frame" x="94" y="77" width="186" height="23"/>
@@ -81,10 +95,51 @@
                                 <color key="textColor" red="1" green="0.097630650240000005" blue="0.69955441190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXL-BR-YaK">
+                                <rect key="frame" x="164" y="182" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dd-uT-7LO">
+                                <rect key="frame" x="219" y="187" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wP-QH-diW">
+                                <rect key="frame" x="107" y="187" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggO-XJ-MIS">
+                                <rect key="frame" x="132" y="108" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="End Your Turn">
+                                    <color key="titleColor" red="1" green="0.13625308277059933" blue="0.06416756371822907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endPlayerTurnWithSender:" destination="uAd-NG-Hwx" eventType="touchUpInside" id="4ZQ-TC-uGa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88636994410216474" green="1" blue="0.89669584096189325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qT9-rc-Y0f"/>
                     </view>
+                    <connections>
+                        <outlet property="btnEndTurn" destination="ggO-XJ-MIS" id="gR6-a0-eTa"/>
+                        <outlet property="btnLeaningJowler" destination="aKB-3Q-2P8" id="LPE-Ne-gyK"/>
+                        <outlet property="btnPigOut" destination="Xl2-Xq-ebV" id="nmJ-KH-fNM"/>
+                        <outlet property="btnQuitGame" destination="T6d-Yp-i8e" id="UqY-rA-TDl"/>
+                        <outlet property="btnRazorback" destination="er4-mx-bKN" id="lAV-01-qh9"/>
+                        <outlet property="btnSlider" destination="izj-91-DpP" id="u6I-Oh-bMT"/>
+                        <outlet property="btnSnouter" destination="91L-Hf-Cuu" id="wWY-tz-IM8"/>
+                        <outlet property="btnTrotter" destination="wd5-ej-Aeh" id="YuV-4x-xpi"/>
+                        <outlet property="lbCurrentPlayer" destination="5gH-r5-0Q3" id="inn-9b-oim"/>
+                        <outlet property="lbCurrentScore" destination="cWb-yQ-P6a" id="svV-8Y-dmf"/>
+                        <outlet property="swScoreDoubler" destination="dXL-BR-YaK" id="Kei-r2-R9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZM-RB-Z3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

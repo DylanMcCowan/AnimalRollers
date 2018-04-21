@@ -20,6 +20,7 @@
 		FC192222208BBF9900B2F782 /* pig-3.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221C208BBF9900B2F782 /* pig-3.png */; };
 		FC192223208BBF9900B2F782 /* pig-5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221D208BBF9900B2F782 /* pig-5.png */; };
 		FC192224208BBF9900B2F782 /* pig-6.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221E208BBF9900B2F782 /* pig-6.png */; };
+		FC192226208BC67700B2F782 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC192225208BC67700B2F782 /* GameLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FC19221C208BBF9900B2F782 /* pig-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-3.png"; sourceTree = "<group>"; };
 		FC19221D208BBF9900B2F782 /* pig-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-5.png"; sourceTree = "<group>"; };
 		FC19221E208BBF9900B2F782 /* pig-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-6.png"; sourceTree = "<group>"; };
+		FC192225208BC67700B2F782 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */,
+				FC192225208BC67700B2F782 /* GameLogic.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -184,7 +187,7 @@
 				TargetAttributes = {
 					FC0C3627206AD27B00E1B0BA = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -233,6 +236,7 @@
 			files = (
 				FC192217208BB3DF00B2F782 /* GameScreenViewController.swift in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
+				FC192226208BC67700B2F782 /* GameLogic.swift in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,8 +382,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W28JC3BNH3;
 				INFOPLIST_FILE = AnimalRollers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
@@ -394,8 +399,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W28JC3BNH3;
 				INFOPLIST_FILE = AnimalRollers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
