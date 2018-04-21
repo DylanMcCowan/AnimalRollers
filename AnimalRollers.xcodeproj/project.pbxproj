@@ -12,6 +12,9 @@
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
 		FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */; };
 		FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC192206208BAFF400B2F782 /* HomeViewController.swift */; };
+		FC192210208BB0FB00B2F782 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19220A208BB0FA00B2F782 /* UserCell.m */; };
+		FC192211208BB0FB00B2F782 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19220B208BB0FB00B2F782 /* DataHandler.m */; };
+		FC192212208BB0FB00B2F782 /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19220E208BB0FB00B2F782 /* Data.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,13 @@
 		FC0C3635206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC0C3637206AD27B00E1B0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC192206208BAFF400B2F782 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC192209208BB0F900B2F782 /* AnimalRollers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalRollers-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC19220A208BB0FA00B2F782 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		FC19220B208BB0FB00B2F782 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		FC19220C208BB0FB00B2F782 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		FC19220D208BB0FB00B2F782 /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		FC19220E208BB0FB00B2F782 /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		FC19220F208BB0FB00B2F782 /* DataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		FC0C362A206AD27B00E1B0BA /* AnimalRollers */ = {
 			isa = PBXGroup;
 			children = (
+				FC192208208BB0A300B2F782 /* DataComponents-Obj-C */,
 				FC0C3640206AD89E00E1B0BA /* Storyboards */,
 				FC0C363F206AD87300E1B0BA /* Assets */,
 				FC192205208BAF5800B2F782 /* View Controllers */,
@@ -120,6 +131,20 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		FC192208208BB0A300B2F782 /* DataComponents-Obj-C */ = {
+			isa = PBXGroup;
+			children = (
+				FC19220F208BB0FB00B2F782 /* DataHandler.h */,
+				FC19220B208BB0FB00B2F782 /* DataHandler.m */,
+				FC19220C208BB0FB00B2F782 /* UserCell.h */,
+				FC19220A208BB0FA00B2F782 /* UserCell.m */,
+				FC19220D208BB0FB00B2F782 /* Data.h */,
+				FC19220E208BB0FB00B2F782 /* Data.m */,
+				FC192209208BB0F900B2F782 /* AnimalRollers-Bridging-Header.h */,
+			);
+			path = "DataComponents-Obj-C";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +177,7 @@
 				TargetAttributes = {
 					FC0C3627206AD27B00E1B0BA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -192,7 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC192211208BB0FB00B2F782 /* DataHandler.m in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
+				FC192210208BB0FB00B2F782 /* UserCell.m in Sources */,
+				FC192212208BB0FB00B2F782 /* Data.m in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AnimalRollers/Info.plist;
@@ -337,6 +367,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnimalRollers/DataComponents-Obj-C/AnimalRollers-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -346,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AnimalRollers/Info.plist;
@@ -353,6 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnimalRollers/DataComponents-Obj-C/AnimalRollers-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
