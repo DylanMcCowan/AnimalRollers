@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AEEE21DD208BCB8800C41226 /* GameDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = AEEE21DC208BCB8800C41226 /* GameDatabase.db */; };
 		FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */; };
-		FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */; };
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
 		FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */; };
 		FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC192206208BAFF400B2F782 /* HomeViewController.swift */; };
@@ -22,7 +21,6 @@
 		AEEE21DC208BCB8800C41226 /* GameDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameDatabase.db; sourceTree = "<group>"; };
 		FC0C3628206AD27B00E1B0BA /* AnimalRollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC0C3630206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Homescreen.storyboard; sourceTree = "<group>"; };
 		FC0C3632206AD27B00E1B0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC0C3635206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC0C3637206AD27B00E1B0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		FC0C3640206AD89E00E1B0BA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */,
 				FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -219,7 +216,6 @@
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
 				AEEE21DD208BCB8800C41226 /* GameDatabase.db in Resources */,
-				FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,14 +237,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC0C3630206AD27B00E1B0BA /* Base */,
-			);
-			name = Homescreen.storyboard;
-			sourceTree = "<group>";
-		};
 		FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
