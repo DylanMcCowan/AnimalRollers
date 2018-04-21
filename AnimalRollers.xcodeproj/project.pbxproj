@@ -54,7 +54,7 @@
 			children = (
 				FC0C3640206AD89E00E1B0BA /* Storyboards */,
 				FC0C363F206AD87300E1B0BA /* Assets */,
-				FC0C363E206AD84B00E1B0BA /* View Controllers */,
+				FC192205208BAF5800B2F782 /* View Controllers */,
 				FC0C363D206AD84100E1B0BA /* Classes */,
 				FC0C3632206AD27B00E1B0BA /* Assets.xcassets */,
 				FC0C3637206AD27B00E1B0BA /* Info.plist */,
@@ -70,19 +70,12 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		FC0C363E206AD84B00E1B0BA /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
 		FC0C363F206AD87300E1B0BA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				FC0C3643206AD92F00E1B0BA /* Animals */,
 				FC0C3642206AD91F00E1B0BA /* Audio */,
-				FC0C3641206AD90F00E1B0BA /* Imags */,
+				FC0C3641206AD90F00E1B0BA /* Images */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -96,11 +89,11 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FC0C3641206AD90F00E1B0BA /* Imags */ = {
+		FC0C3641206AD90F00E1B0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Imags;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		FC0C3642206AD91F00E1B0BA /* Audio */ = {
@@ -115,6 +108,13 @@
 			children = (
 			);
 			path = Animals;
+			sourceTree = "<group>";
+		};
+		FC192205208BAF5800B2F782 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
