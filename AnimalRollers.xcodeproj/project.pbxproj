@@ -12,6 +12,14 @@
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
 		FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */; };
 		FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC192206208BAFF400B2F782 /* HomeViewController.swift */; };
+		FC192215208BB3A700B2F782 /* GameLogic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC192213208BB3A700B2F782 /* GameLogic.storyboard */; };
+		FC192217208BB3DF00B2F782 /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC192216208BB3DF00B2F782 /* GameScreenViewController.swift */; };
+		FC19221F208BBF9900B2F782 /* pig-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC192219208BBF9800B2F782 /* pig-1.png */; };
+		FC192220208BBF9900B2F782 /* pig-4.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221A208BBF9800B2F782 /* pig-4.png */; };
+		FC192221208BBF9900B2F782 /* pig-2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221B208BBF9900B2F782 /* pig-2.png */; };
+		FC192222208BBF9900B2F782 /* pig-3.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221C208BBF9900B2F782 /* pig-3.png */; };
+		FC192223208BBF9900B2F782 /* pig-5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221D208BBF9900B2F782 /* pig-5.png */; };
+		FC192224208BBF9900B2F782 /* pig-6.png in Resources */ = {isa = PBXBuildFile; fileRef = FC19221E208BBF9900B2F782 /* pig-6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		FC0C3635206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC0C3637206AD27B00E1B0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC192206208BAFF400B2F782 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC192214208BB3A700B2F782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GameLogic.storyboard; sourceTree = "<group>"; };
+		FC192216208BB3DF00B2F782 /* GameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
+		FC192219208BBF9800B2F782 /* pig-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-1.png"; sourceTree = "<group>"; };
+		FC19221A208BBF9800B2F782 /* pig-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-4.png"; sourceTree = "<group>"; };
+		FC19221B208BBF9900B2F782 /* pig-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-2.png"; sourceTree = "<group>"; };
+		FC19221C208BBF9900B2F782 /* pig-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-3.png"; sourceTree = "<group>"; };
+		FC19221D208BBF9900B2F782 /* pig-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-5.png"; sourceTree = "<group>"; };
+		FC19221E208BBF9900B2F782 /* pig-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-6.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,7 @@
 			children = (
 				FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */,
 				FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */,
+				FC192213208BB3A700B2F782 /* GameLogic.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -94,6 +111,7 @@
 		FC0C3641206AD90F00E1B0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FC192218208BB4B500B2F782 /* GameScreenImg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -116,8 +134,22 @@
 			isa = PBXGroup;
 			children = (
 				FC192206208BAFF400B2F782 /* HomeViewController.swift */,
+				FC192216208BB3DF00B2F782 /* GameScreenViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FC192218208BB4B500B2F782 /* GameScreenImg */ = {
+			isa = PBXGroup;
+			children = (
+				FC192219208BBF9800B2F782 /* pig-1.png */,
+				FC19221B208BBF9900B2F782 /* pig-2.png */,
+				FC19221C208BBF9900B2F782 /* pig-3.png */,
+				FC19221A208BBF9800B2F782 /* pig-4.png */,
+				FC19221D208BBF9900B2F782 /* pig-5.png */,
+				FC19221E208BBF9900B2F782 /* pig-6.png */,
+			);
+			path = GameScreenImg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +212,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
+				FC192224208BBF9900B2F782 /* pig-6.png in Resources */,
+				FC19221F208BBF9900B2F782 /* pig-1.png in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
 				FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */,
+				FC192222208BBF9900B2F782 /* pig-3.png in Resources */,
+				FC192223208BBF9900B2F782 /* pig-5.png in Resources */,
+				FC192215208BB3A700B2F782 /* GameLogic.storyboard in Resources */,
+				FC192220208BBF9900B2F782 /* pig-4.png in Resources */,
+				FC192221208BBF9900B2F782 /* pig-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC192217208BB3DF00B2F782 /* GameScreenViewController.swift in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);
@@ -214,6 +254,14 @@
 				FC0C3635206AD27B00E1B0BA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FC192213208BB3A700B2F782 /* GameLogic.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC192214208BB3A700B2F782 /* Base */,
+			);
+			name = GameLogic.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
