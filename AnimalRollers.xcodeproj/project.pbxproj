@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE241F0E208BEC9600294814 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE241F0D208BEC9600294814 /* AddViewController.m */; };
+		AE241F12208BF73600294814 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE241F10208BF73600294814 /* libsqlite3.tbd */; };
+		AE241F13208BF73600294814 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE241F11208BF73600294814 /* libsqlite3.0.tbd */; };
 		AEEE21DD208BCB8800C41226 /* GameDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = AEEE21DC208BCB8800C41226 /* GameDatabase.db */; };
+		AEEE2200208BE70C00C41226 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEE21FF208BE70C00C41226 /* TableViewController.m */; };
 		FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */; };
 		FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */; };
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
@@ -19,7 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE241F0C208BEC9600294814 /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		AE241F0D208BEC9600294814 /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		AE241F10208BF73600294814 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AE241F11208BF73600294814 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AEEE21DC208BCB8800C41226 /* GameDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameDatabase.db; sourceTree = "<group>"; };
+		AEEE21FE208BE70C00C41226 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		AEEE21FF208BE70C00C41226 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		FC0C3628206AD27B00E1B0BA /* AnimalRollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC0C3630206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Homescreen.storyboard; sourceTree = "<group>"; };
@@ -41,12 +51,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE241F12208BF73600294814 /* libsqlite3.tbd in Frameworks */,
+				AE241F13208BF73600294814 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE241F0F208BF73500294814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE241F11208BF73600294814 /* libsqlite3.0.tbd */,
+				AE241F10208BF73600294814 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEEE21DB208BCB6A00C41226 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +81,7 @@
 			children = (
 				FC0C362A206AD27B00E1B0BA /* AnimalRollers */,
 				FC0C3629206AD27B00E1B0BA /* Products */,
+				AE241F0F208BF73500294814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				FC192206208BAFF400B2F782 /* HomeViewController.swift */,
+				AEEE21FE208BE70C00C41226 /* TableViewController.h */,
+				AEEE21FF208BE70C00C41226 /* TableViewController.m */,
+				AE241F0C208BEC9600294814 /* AddViewController.h */,
+				AE241F0D208BEC9600294814 /* AddViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -231,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC192211208BB0FB00B2F782 /* DataHandler.m in Sources */,
+				AEEE2200208BE70C00C41226 /* TableViewController.m in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
+				AE241F0E208BEC9600294814 /* AddViewController.m in Sources */,
 				FC192210208BB0FB00B2F782 /* UserCell.m in Sources */,
 				FC192212208BB0FB00B2F782 /* Data.m in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
