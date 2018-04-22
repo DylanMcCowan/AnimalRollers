@@ -10,16 +10,17 @@
 
 @interface Player: NSObject
 {
+    NSInteger gameScore;
     NSString *name;
     NSString *level;
     NSString *score;
 
 }
 
+@property(nonatomic) NSInteger gameScore;
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *level;
 @property(nonatomic, strong) NSString *score;
-
 
 -(id)initWithData:(NSString *)playerName playerLevel:(NSString *)level playerScore:(NSString *)score;
 

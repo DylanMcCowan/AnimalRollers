@@ -12,12 +12,33 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //GAME LOGIC Handler
+    var gl : GameLogic?
+    
+    //DATAHANDLER
+    var dh : DataHandler!
 
+    
+    //PLAYERS CURRENTLY IN A GAME
+    var gamePlayers : Array<Player>!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        dh = DataHandler()
+        gamePlayers = Array<Player>()
+        
+        
         return true
     }
+    
+    func startNewGame()
+    {
+       var playerCollection = Array<Player>()
+        
+        gl = GameLogic(players: playerCollection, difficulty: 100)
+    }
+ 
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

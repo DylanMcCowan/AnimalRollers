@@ -10,31 +10,46 @@ import UIKit
 
 class GameLogic: NSObject {
     
-    override init() {
-    }
+    let appDel = UIApplication.shared.delegate as! AppDelegate
+    var currentPlayerIndex = 0;
     
-    func startNewGame()
-    {
-        //RECIEVE AN ARRAY OF PLAYERS
+    var currPlayerInitalScore : String?
+    var currPlayerRunningScore = 0
+    
+    private  var  WIN_SCORE = 0
+    private var PLAYER_WINS : Bool
+
+
+    init(players: Array<Player>, difficulty: Int) {
+        for p in players {
+            appDel.gamePlayers.append(p)
+        }
         
-        //ADD THEM TO THE CURRENT PLAYERS OBJECT
+        WIN_SCORE = difficulty
+        PLAYER_WINS = false
+        
+        currPlayerInitalScore = appDel.gamePlayers[currentPlayerIndex].score
     }
-    
+
     func pauseMusic()
     {
     }
     
     func nextPlayer() -> String
     {
-        //SAVE THE CURRENT RUNNING SCORE FOR THE CURRENT PLAYER
-        //ADVANCE TO THE NEXT PLAYER IN THE PLAYER OBJECTS
+        //SAVE THE CURRENT RUNNING SCORE FOR THE CURRENT PLAYER to their Game Score
+        appDel.gamePlayers[currentPlayerIndex].gameScore += currPlayerRunningScore
         
-        return "PLAYER X" //RETURN THE NAME OF THE NEXT PLAYER (WHICH IS NOW THE CURRENT ONE)
-    }
-    
-    func pigOut()
-    {
-        //REMOVE THE ACCUMULATED SCORE OF THE CURRENT PLAYER TO WHEN THEY STARTED THEIR TURN
+        //ADVANCE TO THE NEXT PLAYER IN THE PLAYER OBJECTS
+        if currentPlayerIndex == appDel.gamePlayers.count
+        {
+            currentPlayerIndex = 0
+            
+        }else{
+            currentPlayerIndex += 1
+        }
+        //RETURN THE NAME OF THE NEXT PLAYER (WHICH IS NOW THE CURRENT ONE)
+        return appDel.gamePlayers[currentPlayerIndex].name
     }
     
     func calculateScore(newScore:Int)
@@ -42,24 +57,28 @@ class GameLogic: NSObject {
         //UPDATE THE CURRENT PLAYER'S RUNNING SCORE
         if newScore == -1
         {
+            currPlayerRunningScore = 0
             
         }else if newScore == -2
         {
-            pigOut()
+            
             
         }else{
-            
+            currPlayerRunningScore += newScore
         }
+        
+        determineWinner()
     }
     
     func getCurrentScore() -> String
     {
-        return "XYZ SCORE" //CURRENT PLAYER SCORE AS A String from the CURRENT PLAYER's RUNNING SCORE
+        return String(appDel.gamePlayers[currentPlayerIndex].gameScore)
     }
     
     func quitGame()
     {
         //REMOVE ALL PLAYERS FROM CURRENT GAME OBJECT
+        appDel.gamePlayers.removeAll()
     }
     
     func getRandomValue() -> Int
@@ -68,10 +87,19 @@ class GameLogic: NSObject {
         return 1;
     }
     
-   private func getPlayersFromDatabase()
+    func gameWon() -> Bool
     {
-        //LOAD PLAYERS FROM THE DATABASE
-        
+        return PLAYER_WINS
     }
+    
+    private func determineWinner()
+    {
+        if currPlayerRunningScore + appDel.gamePlayers[currentPlayerIndex].gameScore >= WIN_SCORE
+        {
+            //PLAYER WINS
+            PLAYER_WINS = true;
+        }
+    }
+    
 
 }

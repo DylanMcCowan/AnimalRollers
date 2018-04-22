@@ -44,7 +44,6 @@
 		FC19221D208BBF9900B2F782 /* pig-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-5.png"; sourceTree = "<group>"; };
 		FC19221E208BBF9900B2F782 /* pig-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pig-6.png"; sourceTree = "<group>"; };
 		FC192225208BC67700B2F782 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
-		FC192228208BF4F400B2F782 /* AnimalRollers-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AnimalRollers-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC192229208BF4F400B2F782 /* DataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
 		FC19222A208BF4F400B2F782 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		FC19222B208BF4F400B2F782 /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		FC19222D208BF4F400B2F782 /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 		FC19222E208BF4F400B2F782 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		FC192230208BF4F500B2F782 /* GameDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameDatabase.db; sourceTree = "<group>"; };
+		FC192236208BFC0000B2F782 /* AnimalRollers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalRollers-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,13 +172,13 @@
 		FC192227208BF4F400B2F782 /* DataComponents-Obj-C */ = {
 			isa = PBXGroup;
 			children = (
-				FC192228208BF4F400B2F782 /* AnimalRollers-Bridging-Header.h */,
 				FC192229208BF4F400B2F782 /* DataHandler.m */,
 				FC19222A208BF4F400B2F782 /* Player.h */,
 				FC19222B208BF4F400B2F782 /* UserCell.h */,
 				FC19222C208BF4F400B2F782 /* DataHandler.h */,
 				FC19222D208BF4F400B2F782 /* UserCell.m */,
 				FC19222E208BF4F400B2F782 /* Player.m */,
+				FC192236208BFC0000B2F782 /* AnimalRollers-Bridging-Header.h */,
 			);
 			path = "DataComponents-Obj-C";
 			sourceTree = "<group>";
@@ -430,6 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnimalRollers/DataComponents-Obj-C/AnimalRollers-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -447,6 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.greycodegroup.AnimalRollers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnimalRollers/DataComponents-Obj-C/AnimalRollers-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -24,7 +24,8 @@ class GameScreenViewController: UIViewController {
     @IBOutlet var lbCurrentPlayer : UILabel!
     @IBOutlet var lbCurrentScore : UILabel!
     
-    let gl = GameLogic()
+   
+    let del = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,7 @@ class GameScreenViewController: UIViewController {
         
         let yesQuit = UIAlertAction(title: "Yes", style: .default, handler:
             {(alert : UIAlertAction!) in
-                self.gl.quitGame()
+                self.del.gl?.quitGame()
                 self.dismiss(animated: true, completion: nil)
         })
         
@@ -72,27 +73,27 @@ class GameScreenViewController: UIViewController {
         
         switch sender.tag {
         case 0:
-            gl.calculateScore(newScore: 1)
+            del.gl?.calculateScore(newScore: 1)
             break
         case 1:
-            gl.calculateScore(newScore: (5 * multiplier) )
+            del.gl?.calculateScore(newScore: (5 * multiplier) )
             break
         case 2:
-            gl.calculateScore(newScore: (5 * multiplier) )
+            del.gl?.calculateScore(newScore: (5 * multiplier) )
             break
         case 3:
-            gl.calculateScore(newScore: (10 * multiplier) )
+            del.gl?.calculateScore(newScore: (10 * multiplier) )
             break
         case 4:
-            gl.calculateScore(newScore: (15 * multiplier) )
+            del.gl?.calculateScore(newScore: (15 * multiplier) )
             break
         case 5:
-            gl.calculateScore(newScore: -1)
+            del.gl?.calculateScore(newScore: -1)
             alertPigOut()
             endTurn()
             break
         default:
-            gl.calculateScore(newScore: -2)
+            del.gl?.calculateScore(newScore: -2)
         }
         updatePlayerScoreLabel()
     }
@@ -100,6 +101,7 @@ class GameScreenViewController: UIViewController {
     private func endTurn()
     {
         updatePlayer()
+        
     }
     
     private func alertPigOut()
@@ -113,13 +115,13 @@ class GameScreenViewController: UIViewController {
     
     private func updatePlayerScoreLabel()
     {
-        lbCurrentScore.text = gl.getCurrentScore()
+        lbCurrentScore.text = del.gl?.getCurrentScore()
     }
     
     private func updatePlayer()
     {
-        lbCurrentScore.text = String(gl.getCurrentScore())
-        lbCurrentPlayer.text = gl.nextPlayer()
+        lbCurrentScore.text = String(del.gl!.getCurrentScore())
+        lbCurrentPlayer.text = del.gl?.nextPlayer()
     }
 
     /*

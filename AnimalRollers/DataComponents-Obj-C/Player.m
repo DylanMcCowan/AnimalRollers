@@ -10,7 +10,7 @@
 
 @implementation Player
 
-@synthesize name, level, score;
+@synthesize name, level, score, gameScore;
 
 //name, level, score
 -(id)initWithData:(NSString *)playerName playerLevel:(NSString *)level playerScore:(NSString *)score;
@@ -21,6 +21,7 @@
         self.name = name;
         self.level = level;
         self.score = score;
+        self.gameScore = 0;
         
        
     }
