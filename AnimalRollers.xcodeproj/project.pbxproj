@@ -29,6 +29,9 @@
 		FC690FE3208F896B006E278D /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = FC690FE1208F896B006E278D /* pig.png */; };
 		FC690FE5208F8972006E278D /* AugmentedReality_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */; };
 		FC690FE7208F8ECD006E278D /* ComputerPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */; };
+		FC690FE9208FA2E6006E278D /* RandomValueGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */; };
+		FC690FEB208FA2F6006E278D /* PigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FEA208FA2F6006E278D /* PigScene.swift */; };
+		FC690FED208FA3A5006E278D /* pig.atlas in Resources */ = {isa = PBXBuildFile; fileRef = FC690FEC208FA3A5006E278D /* pig.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		FC690FE1208F896B006E278D /* pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pig.png; sourceTree = "<group>"; };
 		FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedReality_VC.swift; sourceTree = "<group>"; };
 		FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerPlayerViewController.swift; sourceTree = "<group>"; };
+		FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomValueGenerator.swift; sourceTree = "<group>"; };
+		FC690FEA208FA2F6006E278D /* PigScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigScene.swift; sourceTree = "<group>"; };
+		FC690FEC208FA3A5006E278D /* pig.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 		FC0C363D206AD84100E1B0BA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FC690FEA208FA2F6006E278D /* PigScene.swift */,
+				FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */,
 				FC690FDD208F80A5006E278D /* HapticFeedback.swift */,
 				FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */,
 				FC192225208BC67700B2F782 /* GameLogic.swift */,
@@ -152,6 +160,7 @@
 		FC0C3643206AD92F00E1B0BA /* Animals */ = {
 			isa = PBXGroup;
 			children = (
+				FC690FEC208FA3A5006E278D /* pig.atlas */,
 			);
 			path = Animals;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC690FED208FA3A5006E278D /* pig.atlas in Resources */,
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
 				FC192234208BF4F500B2F782 /* GameDatabase.db in Resources */,
 				FC192224208BBF9900B2F782 /* pig-6.png in Resources */,
@@ -296,9 +306,11 @@
 				FC690FE7208F8ECD006E278D /* ComputerPlayerViewController.swift in Sources */,
 				FC690FE5208F8972006E278D /* AugmentedReality_VC.swift in Sources */,
 				FC192231208BF4F500B2F782 /* DataHandler.m in Sources */,
+				FC690FE9208FA2E6006E278D /* RandomValueGenerator.swift in Sources */,
 				FC192217208BB3DF00B2F782 /* ScoreKeeperViewController.swift in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
 				FC192226208BC67700B2F782 /* GameLogic.swift in Sources */,
+				FC690FEB208FA2F6006E278D /* PigScene.swift in Sources */,
 				FC192233208BF4F500B2F782 /* Player.m in Sources */,
 				FC690FDE208F80A5006E278D /* HapticFeedback.swift in Sources */,
 				FC192232208BF4F500B2F782 /* UserCell.m in Sources */,
