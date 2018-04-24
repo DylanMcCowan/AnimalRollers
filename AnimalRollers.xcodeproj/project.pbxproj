@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */; };
-		FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */; };
 		FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3632206AD27B00E1B0BA /* Assets.xcassets */; };
-		FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */; };
 		FC192200208BA2A500B2F782 /* pig.scn in Resources */ = {isa = PBXBuildFile; fileRef = FC1921FF208BA2A500B2F782 /* pig.scn */; };
 		FC192202208BA2B200B2F782 /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = FC192201208BA2B200B2F782 /* pig.png */; };
 		FCD883FB206C0E600092A763 /* AugmentedReality_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD883FA206C0E600092A763 /* AugmentedReality_VC.swift */; };
@@ -19,9 +17,7 @@
 /* Begin PBXFileReference section */
 		FC0C3628206AD27B00E1B0BA /* AnimalRollers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalRollers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC0C3630206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Homescreen.storyboard; sourceTree = "<group>"; };
 		FC0C3632206AD27B00E1B0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC0C3635206AD27B00E1B0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC0C3637206AD27B00E1B0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC1921FF208BA2A500B2F782 /* pig.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = pig.scn; sourceTree = "<group>"; };
 		FC192201208BA2B200B2F782 /* pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pig.png; sourceTree = "<group>"; };
@@ -98,8 +94,6 @@
 		FC0C3640206AD89E00E1B0BA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */,
-				FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -193,11 +187,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
 				FC192202208BA2B200B2F782 /* pig.png in Resources */,
 				FC192200208BA2A500B2F782 /* pig.scn in Resources */,
-				FC0C3631206AD27B00E1B0BA /* Homescreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,25 +206,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FC0C362F206AD27B00E1B0BA /* Homescreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC0C3630206AD27B00E1B0BA /* Base */,
-			);
-			name = Homescreen.storyboard;
-			sourceTree = "<group>";
-		};
-		FC0C3634206AD27B00E1B0BA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC0C3635206AD27B00E1B0BA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FC0C3638206AD27B00E1B0BA /* Debug */ = {
