@@ -15,6 +15,8 @@ class AugmentedReality_VC: UIViewController, ARSCNViewDelegate{
 
     //This variable is for the AR Scene View, which will allow the AR content to be displayed on it
     @IBOutlet var scnView : ARSCNView!
+    
+    @IBOutlet var btnBack : UIButton!
 
     //THe name of the desired node from the pig SceneKit file containing the pig model
     let nodeName = "pig"

@@ -1,25 +1,14 @@
 //
-//  HomeViewController.swift
+//  ComputerPlayerViewController.swift
 //  AnimalRollers
 //
-//  Created by Dylan McCowan on 2018-04-21.
+//  Created by Dylan McCowan on 2018-04-24.
 //  Copyright © 2018 GreyCodeGroup. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    @IBOutlet var btnNewGame : UIButton!
-    @IBOutlet var btnViewPlayers : UIButton!
-    @IBOutlet var btnSettings : UIButton!
-    @IBOutlet var btnARMode : UIButton!
-    @IBOutlet var btnVolume : UIButton!
-
-    
-    @IBAction func unwindToHome(sender: UIStoryboardSegue)
-    {
-    }
+class ComputerPlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
