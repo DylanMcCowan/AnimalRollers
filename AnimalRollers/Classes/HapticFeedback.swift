@@ -10,19 +10,19 @@ import UIKit
 
 class HapticFeedback: NSObject {
 
-    @IBAction func errorButtonTapped(_ sender : UIButton)
+    func errorButtonTapped(_ sender : Any)
     {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.error)
     }
     
-    @IBAction func warningButtonTapped(_ sender : UIButton)
+    func warningButtonTapped(_ sender : Any)
     {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.warning)
     }
     
-    @IBAction func successButtonTapped(_ sender : UIButton)
+     func successButtonTapped(_ sender : Any)
     {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
@@ -30,19 +30,19 @@ class HapticFeedback: NSObject {
     
     //generator.prepare() - to be used in the class where we check for collision, to make the feedback sync with the action. This method prepares the taptic engine to generate those feedbacks
     
-    @IBAction func lightButtonTapped(_ sender : UIButton)
+    func lightButtonTapped(_ sender : Any)
     {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
     
-    @IBAction func mediumButtonTapped(_ sender : UIButton)
+    func mediumButtonTapped(_ sender : Any)
     {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
     }
     
-    @IBAction func heavyButtonTapped(_ sender : UIButton)
+    func heavyButtonTapped(_ sender : Any)
     {
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
