@@ -18,6 +18,7 @@ class GameLogic: NSObject {
     
     private  var  WIN_SCORE = 0
     private var PLAYER_WINS : Bool
+    private var rndValue : RandomValueGenerator
 
 
     init(players: Array<Player>, difficulty: Int) {
@@ -27,6 +28,7 @@ class GameLogic: NSObject {
         
         WIN_SCORE = difficulty
         PLAYER_WINS = false
+        rndValue = RandomValueGenerator()
         
         currPlayerInitalScore = appDel.gamePlayers[currentPlayerIndex].score
     }
@@ -83,8 +85,7 @@ class GameLogic: NSObject {
     
     func getRandomValue() -> Int
     {
-        //MAKE A CALL TO THE RANDOM CLASS TO GET A RANDOM VALUE
-        return 1;
+        return rndValue.Random()
     }
     
     func gameWon() -> Bool

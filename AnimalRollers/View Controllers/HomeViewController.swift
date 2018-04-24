@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 class HomeViewController: UIViewController {
     
@@ -15,6 +16,10 @@ class HomeViewController: UIViewController {
     @IBOutlet var btnSettings : UIButton!
     @IBOutlet var btnARMode : UIButton!
     @IBOutlet var btnVolume : UIButton!
+    
+    @IBOutlet var scnPigScene : SKView!
+    
+    var pigScene : PigScene?
 
     
     @IBAction func unwindToHome(sender: UIStoryboardSegue)
@@ -24,13 +29,27 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
+        
+        self.pigScene = PigScene(size: CGSize(width: self.scnPigScene.frame.size.width, height: self.scnPigScene.frame.size.height))
+        
+        self.scnPigScene.presentScene(pigScene)
+        
+        pigScene?.walkpig()
+      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+     
+    }
+    
     
 
     /*

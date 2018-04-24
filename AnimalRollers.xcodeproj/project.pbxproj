@@ -30,8 +30,11 @@
 		FC690FE5208F8972006E278D /* AugmentedReality_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */; };
 		FC690FE7208F8ECD006E278D /* ComputerPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */; };
 		FC690FE9208FA2E6006E278D /* RandomValueGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */; };
-		FC690FEB208FA2F6006E278D /* PigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FEA208FA2F6006E278D /* PigScene.swift */; };
 		FC690FED208FA3A5006E278D /* pig.atlas in Resources */ = {isa = PBXBuildFile; fileRef = FC690FEC208FA3A5006E278D /* pig.atlas */; };
+		FC690FEF208FB160006E278D /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FEE208FB15F006E278D /* WebsiteViewController.swift */; };
+		FC690FF1208FB182006E278D /* PigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FF0208FB182006E278D /* PigScene.swift */; };
+		FC690FF4208FB1A2006E278D /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC690FF3208FB1A2006E278D /* ARKit.framework */; };
+		FC690FF8208FB9BC006E278D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC690FF7208FB9BC006E278D /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +67,12 @@
 		FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedReality_VC.swift; sourceTree = "<group>"; };
 		FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerPlayerViewController.swift; sourceTree = "<group>"; };
 		FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomValueGenerator.swift; sourceTree = "<group>"; };
-		FC690FEA208FA2F6006E278D /* PigScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigScene.swift; sourceTree = "<group>"; };
 		FC690FEC208FA3A5006E278D /* pig.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig.atlas; sourceTree = "<group>"; };
+		FC690FEE208FB15F006E278D /* WebsiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
+		FC690FF0208FB182006E278D /* PigScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PigScene.swift; sourceTree = "<group>"; };
+		FC690FF3208FB1A2006E278D /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		FC690FF5208FB1A7006E278D /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		FC690FF7208FB9BC006E278D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC690FF8208FB9BC006E278D /* SpriteKit.framework in Frameworks */,
+				FC690FF4208FB1A2006E278D /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +93,7 @@
 			children = (
 				FC0C362A206AD27B00E1B0BA /* AnimalRollers */,
 				FC0C3629206AD27B00E1B0BA /* Products */,
+				FC690FF2208FB1A2006E278D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +124,7 @@
 		FC0C363D206AD84100E1B0BA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FC690FEA208FA2F6006E278D /* PigScene.swift */,
+				FC690FF0208FB182006E278D /* PigScene.swift */,
 				FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */,
 				FC690FDD208F80A5006E278D /* HapticFeedback.swift */,
 				FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */,
@@ -168,6 +178,7 @@
 		FC192205208BAF5800B2F782 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC690FEE208FB15F006E278D /* WebsiteViewController.swift */,
 				FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */,
 				FC192206208BAFF400B2F782 /* HomeViewController.swift */,
 				FC192216208BB3DF00B2F782 /* ScoreKeeperViewController.swift */,
@@ -219,6 +230,16 @@
 			);
 			name = ARContent;
 			path = Assets/ARContent;
+			sourceTree = "<group>";
+		};
+		FC690FF2208FB1A2006E278D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC690FF7208FB9BC006E278D /* SpriteKit.framework */,
+				FC690FF5208FB1A7006E278D /* SceneKit.framework */,
+				FC690FF3208FB1A2006E278D /* ARKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +331,10 @@
 				FC192217208BB3DF00B2F782 /* ScoreKeeperViewController.swift in Sources */,
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
 				FC192226208BC67700B2F782 /* GameLogic.swift in Sources */,
-				FC690FEB208FA2F6006E278D /* PigScene.swift in Sources */,
 				FC192233208BF4F500B2F782 /* Player.m in Sources */,
 				FC690FDE208F80A5006E278D /* HapticFeedback.swift in Sources */,
+				FC690FEF208FB160006E278D /* WebsiteViewController.swift in Sources */,
+				FC690FF1208FB182006E278D /* PigScene.swift in Sources */,
 				FC192232208BF4F500B2F782 /* UserCell.m in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);

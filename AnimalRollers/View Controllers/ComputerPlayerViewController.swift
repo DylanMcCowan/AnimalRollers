@@ -20,6 +20,8 @@ class ComputerPlayerViewController: UIViewController {
     @IBOutlet var ivLeftRollResult : UIImageView!
     @IBOutlet var ivRightRollResult : UIImageView!
     
+    
+    
     var resultImages : Array<UIImage> = []
     
     let scoreValues : Array<Int> = [1,5,5,10,15]
@@ -68,9 +70,7 @@ class ComputerPlayerViewController: UIViewController {
         }
         
     }
-    
-    
-    
+
     private func updateRollResultImages(leftValue: Int, rightValue: Int)
     {
         ivLeftRollResult.image = resultImages[leftValue]
@@ -80,7 +80,20 @@ class ComputerPlayerViewController: UIViewController {
     private func endTurn()
     {
         updatePlayer()
+        isWinner()
         
+    }
+    
+    private func isWinner()
+    {
+        if del.gl?.gameWon() == true
+        {
+            let winAlert = UIAlertController(title: "Winner!", message: "You reached the winning score!", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "Congrats!", style: .cancel, handler: nil)
+            winAlert.addAction(ok)
+            present(winAlert, animated: true)
+        }
     }
     private func alertPigOut()
     {
