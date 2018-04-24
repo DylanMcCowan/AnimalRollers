@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         dh = DataHandler()
         gamePlayers = Array<Player>()
+        dh.insert(intoDatabase: <#T##Player!#>)
         
         
         return true
