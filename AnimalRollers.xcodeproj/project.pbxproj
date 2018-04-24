@@ -25,6 +25,7 @@
 		FC192232208BF4F500B2F782 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19222D208BF4F400B2F782 /* UserCell.m */; };
 		FC192233208BF4F500B2F782 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FC19222E208BF4F400B2F782 /* Player.m */; };
 		FC192234208BF4F500B2F782 /* GameDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = FC192230208BF4F500B2F782 /* GameDatabase.db */; };
+		FC690FDE208F80A5006E278D /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FDD208F80A5006E278D /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FC19222E208BF4F400B2F782 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		FC192230208BF4F500B2F782 /* GameDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameDatabase.db; sourceTree = "<group>"; };
 		FC192236208BFC0000B2F782 /* AnimalRollers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimalRollers-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC690FDD208F80A5006E278D /* HapticFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		FC0C363D206AD84100E1B0BA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FC690FDD208F80A5006E278D /* HapticFeedback.swift */,
 				FC0C362B206AD27B00E1B0BA /* AppDelegate.swift */,
 				FC192225208BC67700B2F782 /* GameLogic.swift */,
 			);
@@ -276,6 +279,7 @@
 				FC0C362C206AD27B00E1B0BA /* AppDelegate.swift in Sources */,
 				FC192226208BC67700B2F782 /* GameLogic.swift in Sources */,
 				FC192233208BF4F500B2F782 /* Player.m in Sources */,
+				FC690FDE208F80A5006E278D /* HapticFeedback.swift in Sources */,
 				FC192232208BF4F500B2F782 /* UserCell.m in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);
