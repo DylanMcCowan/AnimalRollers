@@ -25,17 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         dh = DataHandler()
-        gamePlayers = Array<Player>()
-        
-        
-        
+        dh.initalizeDataHandler()
+        dh.checkAndInitDatabase()
+        dh.readDatabase()
+
         return true
     }
     
     func startNewGame()
     {
+       gamePlayers = Array<Player>()
        var playerCollection = Array<Player>()
+        
+        gamePlayers.removeAll()
+        for pl in dh.players {
+            playerCollection.append(pl as! Player)
+        }
         
         gl = GameLogic(players: playerCollection, difficulty: 100)
     }

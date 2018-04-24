@@ -16,7 +16,9 @@
 -(BOOL)initalizeDataHandler
 {
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
+    self.dbName = @"GameDatabase.db";
+    self.players = [[NSMutableArray alloc] init];
+  
     NSString *documentsDir = [documentPaths objectAtIndex:0];
     
     self.dbPath = [documentsDir stringByAppendingPathComponent:self.dbName];

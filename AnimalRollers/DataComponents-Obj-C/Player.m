@@ -18,7 +18,7 @@
     self = [super init];
     if(self)
     {
-        self.name = name;
+        self.name = playerName;
         self.level = level;
         self.score = score;
         self.gameScore = 0;

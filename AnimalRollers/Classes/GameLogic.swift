@@ -10,7 +10,7 @@ import UIKit
 
 class GameLogic: NSObject {
     
-    let appDel = UIApplication.shared.delegate as! AppDelegate
+    private let appDel = UIApplication.shared.delegate as! AppDelegate
     var currentPlayerIndex = 0;
     
     var currPlayerInitalScore : String?
@@ -23,6 +23,7 @@ class GameLogic: NSObject {
 
     init(players: Array<Player>, difficulty: Int) {
         for p in players {
+            p.gameScore = 0
             appDel.gamePlayers.append(p)
         }
         
@@ -32,21 +33,17 @@ class GameLogic: NSObject {
         
         currPlayerInitalScore = appDel.gamePlayers[currentPlayerIndex].score
     }
-
-    func pauseMusic()
-    {
-    }
     
     func nextPlayer() -> String
     {
         //SAVE THE CURRENT RUNNING SCORE FOR THE CURRENT PLAYER to their Game Score
         appDel.gamePlayers[currentPlayerIndex].gameScore += currPlayerRunningScore
-        
+        currPlayerRunningScore = 0
+  
         //ADVANCE TO THE NEXT PLAYER IN THE PLAYER OBJECTS
-        if currentPlayerIndex == appDel.gamePlayers.count
+        if currentPlayerIndex == appDel.gamePlayers.count - 1
         {
             currentPlayerIndex = 0
-            
         }else{
             currentPlayerIndex += 1
         }
@@ -57,30 +54,37 @@ class GameLogic: NSObject {
     func calculateScore(newScore:Int)
     {
         //UPDATE THE CURRENT PLAYER'S RUNNING SCORE
-        if newScore == -1
+        if newScore == -10
         {
             currPlayerRunningScore = 0
             
         }else if newScore == -2
         {
             
-            
         }else{
             currPlayerRunningScore += newScore
         }
         
+        print(currPlayerRunningScore)
         determineWinner()
+        
     }
     
     func getCurrentScore() -> String
     {
-        return String(appDel.gamePlayers[currentPlayerIndex].gameScore)
+        return String(appDel.gamePlayers[currentPlayerIndex].gameScore + currPlayerRunningScore)
+    }
+    
+    func updateCurrentScore()
+    {
+        appDel.gamePlayers[currentPlayerIndex].gameScore = currPlayerRunningScore
     }
     
     func quitGame()
     {
         //REMOVE ALL PLAYERS FROM CURRENT GAME OBJECT
         appDel.gamePlayers.removeAll()
+        appDel.gamePlayers = nil
     }
     
     func getRandomValue() -> Int
@@ -98,8 +102,9 @@ class GameLogic: NSObject {
         if currPlayerRunningScore + appDel.gamePlayers[currentPlayerIndex].gameScore >= WIN_SCORE
         {
             //PLAYER WINS
-            PLAYER_WINS = true;
+            PLAYER_WINS = true
         }
+        print(PLAYER_WINS)
     }
     
 

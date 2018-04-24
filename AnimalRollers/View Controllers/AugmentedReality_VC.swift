@@ -36,6 +36,8 @@ class AugmentedReality_VC: UIViewController, ARSCNViewDelegate{
         scnView.automaticallyUpdatesLighting = true
     }
     
+ 
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()

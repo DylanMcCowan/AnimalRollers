@@ -120,12 +120,12 @@ class ComputerPlayerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        resultImages.insert(UIImage(named: "pig-1.png")!, at: 1)
-        resultImages.insert(UIImage(named: "pig-2.png")!, at: 2)
-        resultImages.insert(UIImage(named: "pig-3.png")!, at: 3)
-        resultImages.insert(UIImage(named: "pig-4.png")!, at: 4)
-        resultImages.insert(UIImage(named: "pig-5.png")!, at: 5)
-        resultImages.insert(UIImage(named: "pig-6.png")!, at: 6)
+        resultImages.insert(UIImage(named: "pig-1.png")!, at: 0)
+        resultImages.insert(UIImage(named: "pig-2.png")!, at: 1)
+        resultImages.insert(UIImage(named: "pig-3.png")!, at: 2)
+        resultImages.insert(UIImage(named: "pig-4.png")!, at: 3)
+        resultImages.insert(UIImage(named: "pig-5.png")!, at: 4)
+        resultImages.insert(UIImage(named: "pig-6.png")!, at: 5)
         
   
         

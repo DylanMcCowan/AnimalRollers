@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameScreenViewController: UIViewController {
+class ScoreKeeperViewController: UIViewController {
     
     @IBOutlet var btnSlider : UIButton!
     @IBOutlet var btnTrotter : UIButton!
@@ -17,27 +17,30 @@ class GameScreenViewController: UIViewController {
     @IBOutlet var btnLeaningJowler : UIButton!
     @IBOutlet var btnPigOut : UIButton!
     @IBOutlet var btnEndTurn : UIButton!
-    @IBOutlet var btnQuitGame : UIButton!
     
     @IBOutlet var swScoreDoubler : UISwitch!
     
     @IBOutlet var lbCurrentPlayer : UILabel!
     @IBOutlet var lbCurrentScore : UILabel!
     
+    @IBOutlet var btnQuit : UIButton!
+    
    
     let del = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       del.startNewGame()
+        lbCurrentPlayer.text = del.gl?.nextPlayer()
+        lbCurrentScore.text = del.gl?.getCurrentScore()
+        swScoreDoubler.isOn = false
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // MARK: - Game Actions
     @IBAction func endPlayerTurn(sender: UIButton)
@@ -53,6 +56,7 @@ class GameScreenViewController: UIViewController {
             {(alert : UIAlertAction!) in
                 self.del.gl?.quitGame()
                 self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "quitGame", sender: self)
         })
         
         let noQuit = UIAlertAction(title: "No", style: .cancel, handler: nil)
@@ -88,20 +92,39 @@ class GameScreenViewController: UIViewController {
             del.gl?.calculateScore(newScore: (15 * multiplier) )
             break
         case 5:
-            del.gl?.calculateScore(newScore: -1)
+            del.gl?.calculateScore(newScore: -10)
             alertPigOut()
             endTurn()
             break
         default:
             del.gl?.calculateScore(newScore: -2)
         }
+        
+       isWinner()
+    
         updatePlayerScoreLabel()
+    }
+    
+    private func isWinner()
+    {
+        if del.gl?.gameWon() == true
+        {
+            let winAlert = UIAlertController(title: "Winner!", message: "You reached the winning score!", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "Congrats!", style: .cancel, handler:
+            {(alert : UIAlertAction!) in
+                self.del.gl?.quitGame()
+                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "quitGame", sender: self)
+            })
+            winAlert.addAction(ok)
+            present(winAlert, animated: true)
+        }
     }
     
     private func endTurn()
     {
         updatePlayer()
-        
     }
     
     private func alertPigOut()
@@ -120,8 +143,8 @@ class GameScreenViewController: UIViewController {
     
     private func updatePlayer()
     {
-        lbCurrentScore.text = String(del.gl!.getCurrentScore())
         lbCurrentPlayer.text = del.gl?.nextPlayer()
+        lbCurrentScore.text = String(del.gl!.getCurrentScore())
     }
 
     /*
