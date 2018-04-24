@@ -326,6 +326,7 @@
                                     <color key="titleColor" red="1" green="0.13625308280000001" blue="0.064167563720000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="endPlayerTurnWithSender:" destination="AVq-ZL-syL" eventType="touchUpInside" id="Puh-OP-pIB"/>
                                     <action selector="endPlayerTurnWithSender:" destination="unD-KB-oOb" eventType="touchUpInside" id="neG-PV-pyX"/>
                                 </connections>
                             </button>
@@ -341,6 +342,9 @@
                                 <rect key="frame" x="143" y="394" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Roll the Pigs!"/>
+                                <connections>
+                                    <action selector="rollPigsWithSender:" destination="AVq-ZL-syL" eventType="touchUpInside" id="XL0-2w-ChF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roll Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-57-Er4">
                                 <rect key="frame" x="94" y="252" width="186" height="21"/>
@@ -349,10 +353,28 @@
                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PL-3b-q3d">
+                                <rect key="frame" x="286" y="617" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quit Game"/>
+                                <connections>
+                                    <action selector="playerQuitGameWithSender:" destination="AVq-ZL-syL" eventType="touchUpInside" id="ceS-fH-D6I"/>
+                                    <action selector="playerQuitGameWithSender:" destination="unD-KB-oOb" eventType="touchUpInside" id="vT4-rU-9zM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41219401359558105" green="0.66781270503997803" blue="0.84184545278549194" alpha="0.29575128424657532" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="EKf-mf-ThR"/>
                     </view>
+                    <connections>
+                        <outlet property="btnEndTurn" destination="dZZ-u6-uGX" id="m17-tJ-Saz"/>
+                        <outlet property="btnQuitGame" destination="3PL-3b-q3d" id="1hn-uR-Grg"/>
+                        <outlet property="btnRollPigs" destination="cA3-6o-M2t" id="hcK-b1-sxs"/>
+                        <outlet property="ivLeftRollResult" destination="cNM-gk-ACG" id="7jk-YI-sW7"/>
+                        <outlet property="ivRightRollResult" destination="C04-WC-tgL" id="Af5-5f-svU"/>
+                        <outlet property="lbCurrentPlayer" destination="5ae-xc-TYw" id="Q92-WB-tx4"/>
+                        <outlet property="lbCurrentScore" destination="7l4-jv-dhN" id="PPJ-5O-SsM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="527-Ro-Ohb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
