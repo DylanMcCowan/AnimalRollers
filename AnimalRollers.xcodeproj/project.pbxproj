@@ -35,6 +35,13 @@
 		FC690FF1208FB182006E278D /* PigScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FF0208FB182006E278D /* PigScene.swift */; };
 		FC690FF4208FB1A2006E278D /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC690FF3208FB1A2006E278D /* ARKit.framework */; };
 		FC690FF8208FB9BC006E278D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC690FF7208FB9BC006E278D /* SpriteKit.framework */; };
+		FCB3DF9B208FEA9B00755D81 /* Bama Country.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCB3DF9A208FEA9B00755D81 /* Bama Country.mp3 */; };
+		FCB3DF9E208FEAC400755D81 /* muteVolumeOFF.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB3DF9C208FEAC400755D81 /* muteVolumeOFF.png */; };
+		FCB3DF9F208FEAC400755D81 /* muteVolumeON.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB3DF9D208FEAC400755D81 /* muteVolumeON.png */; };
+		FCB3DFA2208FEAFD00755D81 /* AudioSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3DFA0208FEAFD00755D81 /* AudioSettingsViewController.swift */; };
+		FCB3DFA3208FEAFD00755D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3DFA1208FEAFD00755D81 /* ViewController.swift */; };
+		FCB3DFA9208FEFC600755D81 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3DFA7208FEFC600755D81 /* AddViewController.swift */; };
+		FCB3DFAA208FEFC600755D81 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB3DFA8208FEFC600755D81 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +80,14 @@
 		FC690FF3208FB1A2006E278D /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		FC690FF5208FB1A7006E278D /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		FC690FF7208FB9BC006E278D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		FCB3DF9A208FEA9B00755D81 /* Bama Country.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bama Country.mp3"; sourceTree = "<group>"; };
+		FCB3DF9C208FEAC400755D81 /* muteVolumeOFF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muteVolumeOFF.png; sourceTree = "<group>"; };
+		FCB3DF9D208FEAC400755D81 /* muteVolumeON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muteVolumeON.png; sourceTree = "<group>"; };
+		FCB3DFA0208FEAFD00755D81 /* AudioSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSettingsViewController.swift; sourceTree = "<group>"; };
+		FCB3DFA1208FEAFD00755D81 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCB3DFA6208FEFC600755D81 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		FCB3DFA7208FEFC600755D81 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		FCB3DFA8208FEFC600755D81 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +170,8 @@
 		FC0C3641206AD90F00E1B0BA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FCB3DF9C208FEAC400755D81 /* muteVolumeOFF.png */,
+				FCB3DF9D208FEAC400755D81 /* muteVolumeON.png */,
 				FC192218208BB4B500B2F782 /* GameScreenImg */,
 			);
 			path = Images;
@@ -163,6 +180,7 @@
 		FC0C3642206AD91F00E1B0BA /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				FCB3DF9A208FEA9B00755D81 /* Bama Country.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -178,6 +196,11 @@
 		FC192205208BAF5800B2F782 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCB3DFA7208FEFC600755D81 /* AddViewController.swift */,
+				FCB3DFA6208FEFC600755D81 /* TableViewController.h */,
+				FCB3DFA8208FEFC600755D81 /* TableViewController.m */,
+				FCB3DFA0208FEAFD00755D81 /* AudioSettingsViewController.swift */,
+				FCB3DFA1208FEAFD00755D81 /* ViewController.swift */,
 				FC690FEE208FB15F006E278D /* WebsiteViewController.swift */,
 				FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */,
 				FC192206208BAFF400B2F782 /* HomeViewController.swift */,
@@ -304,6 +327,7 @@
 				FC690FED208FA3A5006E278D /* pig.atlas in Resources */,
 				FC0C3636206AD27B00E1B0BA /* LaunchScreen.storyboard in Resources */,
 				FC192234208BF4F500B2F782 /* GameDatabase.db in Resources */,
+				FCB3DF9F208FEAC400755D81 /* muteVolumeON.png in Resources */,
 				FC192224208BBF9900B2F782 /* pig-6.png in Resources */,
 				FC19221F208BBF9900B2F782 /* pig-1.png in Resources */,
 				FC0C3633206AD27B00E1B0BA /* Assets.xcassets in Resources */,
@@ -312,7 +336,9 @@
 				FC690FE3208F896B006E278D /* pig.png in Resources */,
 				FC192223208BBF9900B2F782 /* pig-5.png in Resources */,
 				FC690FE2208F896B006E278D /* pig.scn in Resources */,
+				FCB3DF9B208FEA9B00755D81 /* Bama Country.mp3 in Resources */,
 				FC192220208BBF9900B2F782 /* pig-4.png in Resources */,
+				FCB3DF9E208FEAC400755D81 /* muteVolumeOFF.png in Resources */,
 				FC192221208BBF9900B2F782 /* pig-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB3DFA3208FEAFD00755D81 /* ViewController.swift in Sources */,
 				FC690FE7208F8ECD006E278D /* ComputerPlayerViewController.swift in Sources */,
+				FCB3DFAA208FEFC600755D81 /* TableViewController.m in Sources */,
 				FC690FE5208F8972006E278D /* AugmentedReality_VC.swift in Sources */,
 				FC192231208BF4F500B2F782 /* DataHandler.m in Sources */,
 				FC690FE9208FA2E6006E278D /* RandomValueGenerator.swift in Sources */,
@@ -333,9 +361,11 @@
 				FC192226208BC67700B2F782 /* GameLogic.swift in Sources */,
 				FC192233208BF4F500B2F782 /* Player.m in Sources */,
 				FC690FDE208F80A5006E278D /* HapticFeedback.swift in Sources */,
+				FCB3DFA9208FEFC600755D81 /* AddViewController.swift in Sources */,
 				FC690FEF208FB160006E278D /* WebsiteViewController.swift in Sources */,
 				FC690FF1208FB182006E278D /* PigScene.swift in Sources */,
 				FC192232208BF4F500B2F782 /* UserCell.m in Sources */,
+				FCB3DFA2208FEAFD00755D81 /* AudioSettingsViewController.swift in Sources */,
 				FC192207208BAFF400B2F782 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

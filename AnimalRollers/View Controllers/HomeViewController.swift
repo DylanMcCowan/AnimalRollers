@@ -8,6 +8,10 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
+
+
+
 
 class HomeViewController: UIViewController {
     
@@ -19,7 +23,11 @@ class HomeViewController: UIViewController {
     
     @IBOutlet var scnPigScene : SKView!
     
+     var player = AVAudioPlayer()
+    
     var pigScene : PigScene?
+    
+   
 
     
     @IBAction func unwindToHome(sender: UIStoryboardSegue)
@@ -36,6 +44,17 @@ class HomeViewController: UIViewController {
         self.scnPigScene.presentScene(pigScene)
         
         pigScene?.walkpig()
+        
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "Bama Country", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL (fileURLWithPath: audioPath!) as URL)
+        }
+        catch
+        {
+            //error
+        }
+        player.play()
       
     }
 
