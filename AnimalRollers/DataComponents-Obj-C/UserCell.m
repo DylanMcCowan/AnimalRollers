@@ -48,9 +48,9 @@
 
 -(void) layoutSubviews
 {
-    nameLabel.frame = CGRectMake(130, 5, 460, 20);
-    levelLabel.frame = CGRectMake(130, 35, 460, 20);
-    scoreLabel.frame = CGRectMake(130, 55, 460, 20);
+    nameLabel.frame = CGRectMake(10, 5, 460, 20);
+    levelLabel.frame = CGRectMake(10, 35, 460, 20);
+    scoreLabel.frame = CGRectMake(10, 55, 460, 20);
 
 }
 
