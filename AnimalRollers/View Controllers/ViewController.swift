@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  SoundControlandSocialKit
 //
-//  Created by Xcode User on 2018-04-21.
-//  Copyright © 2018 Xcode User. All rights reserved.
+//  Created by Gustavo Silva on 2018-04-21.
+//  Copyright © 2018 Grey Code Group. All rights reserved.
 //
 
 import UIKit

@@ -2,10 +2,13 @@
 //  HomeViewController.swift
 //  AnimalRollers
 //
-//  Created by Dylan McCowan on 2018-04-21.
+//  Created by GreyCodeGroup on 2018-04-21.
 //  Copyright © 2018 GreyCodeGroup. All rights reserved.
+
+//This is the main screen home view contoller which acts as the hub for the application. Providing the navigation /buttons to all the other areas of functionality
 //
 
+//We need UIKit, SriteKit and AVFoundation to run the aniamtion and sounds
 import UIKit
 import SpriteKit
 import AVFoundation
@@ -15,21 +18,25 @@ import AVFoundation
 
 class HomeViewController: UIViewController {
     
+    //Define outlets for new game, viewing players table, settings page, AR mode and webview - (Author Dylan)
     @IBOutlet var btnNewGame : UIButton!
     @IBOutlet var btnViewPlayers : UIButton!
     @IBOutlet var btnSettings : UIButton!
     @IBOutlet var btnARMode : UIButton!
-    @IBOutlet var btnVolume : UIButton!
+    @IBOutlet var btnWebsiteInfo : UIButton!
     
+    //SpriteKit scene for Animation - (Author Harjot)
     @IBOutlet var scnPigScene : SKView!
     
+    //Audio player for background sound - (Author Gustavo)
      var player = AVAudioPlayer()
     
+    //Variable to hold the pig scene animation - (Author Harjot)
     var pigScene : PigScene?
     
    
 
-    
+    //Allow unwind functionality and return to this home view controller
     @IBAction func unwindToHome(sender: UIStoryboardSegue)
     {
     }
@@ -65,12 +72,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-     
     }
-    
-    
-
     /*
     // MARK: - Navigation
 

@@ -5,6 +5,8 @@
 //  Created by Dylan McCowan on 2018-03-27.
 //  Copyright © 2018 GreyCodeGroup. All rights reserved.
 //
+//The App delegate serves as a platform for the game to provide singleton data access and Game logic instances to ensure a coordinated and efficient operation of the applicaiton
+//
 
 import UIKit
 
@@ -13,16 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    //GAME LOGIC Handler
+    //GAME LOGIC Handler - To access a game logic instance
     var gl : GameLogic?
     
-    //DATAHANDLER
+    //DATAHANDLER - For Database reading and writing
     var dh : DataHandler!
 
     
-    //PLAYERS CURRENTLY IN A GAME
+    //PLAYERS CURRENTLY IN A GAME - This stores players who are currently in a game as created by a new instance of GameLogic
     var gamePlayers : Array<Player>!
 
+    //When the application first loads, ensure everything is properly instanciated with database except GameLogic
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -34,16 +37,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    //When a new game has been requested, we need to create a new game logic instance to handle the functionality
     func startNewGame()
     {
+        //Instanciate the array of game players
        gamePlayers = Array<Player>()
        var playerCollection = Array<Player>()
         
         gamePlayers.removeAll()
+        //Add all of the players in the database into the gameplayers
         for pl in dh.players {
             playerCollection.append(pl as! Player)
         }
         
+        //Create the new GameLogic instance with the players that will be playing the game, and setting the win threshold to 100
         gl = GameLogic(players: playerCollection, difficulty: 100)
     }
  

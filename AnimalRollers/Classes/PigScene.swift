@@ -4,8 +4,8 @@
 //
 // This class implements SpriteKit and Gameplay kit to make a moving 2D animation
 
-//  Created by Xcode User on 2018-04-21.
-//  Copyright © 2018 Harjot. All rights reserved.
+//  Created by Harjot on 2018-04-21.
+//  Copyright © 2018 GreyCodeGroup. All rights reserved.
 //
 
 

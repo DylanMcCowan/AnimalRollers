@@ -2,8 +2,8 @@
 //  WebViewViewController.swift
 //  SpriteKitTest
 //
-//  Created by Xcode User on 2018-04-24.
-//  Copyright © 2018 Harjot. All rights reserved.
+//  Created by Harjot on 2018-04-24.
+//  Copyright © 2018 Grey Code Group. All rights reserved.
 //
 
 import UIKit

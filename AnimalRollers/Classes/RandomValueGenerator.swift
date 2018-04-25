@@ -3,7 +3,7 @@
 //  SpriteKitTest
 //
 //  Created by Xcode User on 2018-04-24.
-//  Copyright © 2018 Harjot. All rights reserved.
+//  Copyright © 2018 GreyCodeGroup. All rights reserved.
 //
 
 import UIKit
