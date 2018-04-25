@@ -28,7 +28,6 @@
 		FC690FE2208F896B006E278D /* pig.scn in Resources */ = {isa = PBXBuildFile; fileRef = FC690FE0208F896B006E278D /* pig.scn */; };
 		FC690FE3208F896B006E278D /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = FC690FE1208F896B006E278D /* pig.png */; };
 		FC690FE5208F8972006E278D /* AugmentedReality_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */; };
-		FC690FE7208F8ECD006E278D /* ComputerPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */; };
 		FC690FE9208FA2E6006E278D /* RandomValueGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */; };
 		FC690FED208FA3A5006E278D /* pig.atlas in Resources */ = {isa = PBXBuildFile; fileRef = FC690FEC208FA3A5006E278D /* pig.atlas */; };
 		FC690FEF208FB160006E278D /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC690FEE208FB15F006E278D /* WebsiteViewController.swift */; };
@@ -72,7 +71,6 @@
 		FC690FE0208F896B006E278D /* pig.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = pig.scn; sourceTree = "<group>"; };
 		FC690FE1208F896B006E278D /* pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pig.png; sourceTree = "<group>"; };
 		FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedReality_VC.swift; sourceTree = "<group>"; };
-		FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerPlayerViewController.swift; sourceTree = "<group>"; };
 		FC690FE8208FA2E6006E278D /* RandomValueGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomValueGenerator.swift; sourceTree = "<group>"; };
 		FC690FEC208FA3A5006E278D /* pig.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pig.atlas; sourceTree = "<group>"; };
 		FC690FEE208FB15F006E278D /* WebsiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				FC690FE4208F8972006E278D /* AugmentedReality_VC.swift */,
 				FC192206208BAFF400B2F782 /* HomeViewController.swift */,
 				FC192216208BB3DF00B2F782 /* ScoreKeeperViewController.swift */,
-				FC690FE6208F8ECD006E278D /* ComputerPlayerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -351,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCB3DFA3208FEAFD00755D81 /* ViewController.swift in Sources */,
-				FC690FE7208F8ECD006E278D /* ComputerPlayerViewController.swift in Sources */,
 				FCB3DFAA208FEFC600755D81 /* TableViewController.m in Sources */,
 				FC690FE5208F8972006E278D /* AugmentedReality_VC.swift in Sources */,
 				FC192231208BF4F500B2F782 /* DataHandler.m in Sources */,
